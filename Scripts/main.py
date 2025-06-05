@@ -9,7 +9,7 @@ from sklearn.metrics import classification_report, accuracy_score
 ## Load the messy dataset ##
 data = pd.read_csv("messy_data.csv")
 
-from testing2 import impute_missing_values, remove_duplicates, normalize_data, remove_redundant_features
+from data_preprocessor import impute_missing_values, remove_duplicates, normalize_data, remove_redundant_features
 
 ## Applying the preprocessing steps in order, updating 'data' each time to run through pipeline, then printing head() to see the changes ##
 data = impute_missing_values(data)
