@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, accuracy_score
 
-data = pd.read_csv("messy_data.csv")
+data = pd.read_csv() ## Fill () with csv file of choice ##
 
 # 1. Impute Missing Values
 def impute_missing_values(data, strategy='mean'):
@@ -139,8 +139,6 @@ data = remove_redundant_features(data)
 
 ## Included this to manually revert target column as I was getting errors before ##
 data['target'] = data['target'].round().astype(int)
-
-data.to_csv("cleaned_data.csv", index=False)
 
 # ---------------------------------------------------
 
